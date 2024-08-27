@@ -1,0 +1,20 @@
+{% extends 'movies/_base.html'%}
+
+<html>
+    <body>
+        {%block content%}
+        <h2> My favorite movies app.Created by Abhishek Reddy boddu and my favourite movie is </h2>
+        {% if movies %}
+            <ul>
+                {% for movie in movies %}
+                    <li> {{ movie|title }} </li> 
+                {%endfor%}
+            </ul>
+        {%else %}
+            <p>
+                No Favourie movies
+            </p>
+        {% endif %}
+        {% endblock %}
+    </body>
+</html>
